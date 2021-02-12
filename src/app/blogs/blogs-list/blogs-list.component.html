@@ -1,1 +1,19 @@
-<p>blogs-list works!</p>
+<div class="row">
+  <div class="col-xs-12">
+    <a href="#" class="list-group-item clearfix" *ngFor="let blog of blogs">
+      <div class="pull-left">
+        <h4 class="list-group-item-header">{{ blog.title }}</h4>
+        <p class="list-group-item-text">{{ blog.content }}</p>
+      </div>
+      <span class="pull-right">
+        <img
+          [src]="blog.imagePath"
+          alt="{{ blog.title }}"
+          class="img-responsive"
+          style="max-height: 50px"
+        />
+      </span>
+    </a>
+    <app-blog-item></app-blog-item>
+  </div>
+</div>
